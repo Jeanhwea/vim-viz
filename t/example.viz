@@ -1,0 +1,27 @@
+Function fun(x As Double) As Double
+    If x > 1 Then
+        fun = x * x
+    ElseIf x > 0 Then
+        func = x
+    Else
+        func = 0
+    End If
+End Sub
+
+Sub OnEnter()
+    fun(3.0)
+End Sub
+
+Sub Hello(cmd As String)
+    Println("hello")
+End Sub
+
+Sub OnInit()
+    Dim sc = Scene.FindContainer("Cube")
+End Sub
+
+Sub OnInitParameters()
+    RegisterPushButton("id1", "Push Me", 1)
+End Sub
+
+
