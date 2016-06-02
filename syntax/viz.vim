@@ -80,25 +80,187 @@ syn keyword vizFunction SendCommand SendRemoteCommand TcpSend
 
 " Viz 3 Script: member methods
 " Alpha
-syn keyword vizMethods FindChannelOfObject FindKeyframeOfObject FindOrCreateChannelOfObject
-syn keyword vizMethods GetChannelsOfObject IsAnimated SetChanged
-" Array
-syn keyword vizMethods Clear Erase Insert Pop Push Sort
-" Base
-syn keyword vizMethods FindChannelOfObject FindKeyframeOfObject FindOrCreateChannelOfObject
-syn keyword vizMethods GetChannelsOfObject IsAnimated SetChanged
-" Scene
-syn keyword vizMethods AddLogMessage CreateRootContainer FindChannelOfObject
-syn keyword vizMethods FindContainer FindKeyframeOfObject FindOrCreateChannelOfObject
-syn keyword vizMethods GetCamera GetChannelsOfObject GetGrid GetLight GetScenePluginInstance
-syn keyword vizMethods GetUnlockedGrid IsAnimated IsBacklayer IsFrontlayer IsMainlayer
-syn keyword vizMethods ScreenPosToWorldGrid ScreenPosToWorldPos SetChanged UpdateSceneTree
-syn keyword vizMethods WorldPosToScreenPos
+syn keyword vizMethods ActionChannelCount ActionString Active ActiveExt Actor
+syn keyword vizMethods AddContainer AddDirector AddHandler AddHostToGroup
+syn keyword vizMethods AddKeyframe AddLogMessage AddScreenOffset AddTrace Alpha
+syn keyword vizMethods Alpha8 AlphaClearValue AlphaValue Ambient AnimationObject
+syn keyword vizMethods Append Attenuation AutoAlpha AutoKeyActive AutoKeyPosition
+syn keyword vizMethods AutoRun BackFace BackScene BackgroundColor Blue Blue8
+syn keyword vizMethods BlurWidth BoolValue CallButtonDownForTopObjectsOnly
+syn keyword vizMethods CallEnterLeaveForBackgroundObjects CallEnterLeaveForTopObjectsOnly
+syn keyword vizMethods CallMouseMoveForBackgroundObjects CallMouseMoveForTopObjectsOnly
+syn keyword vizMethods Center Channel CheckPatternOrientation ChildContainer
+syn keyword vizMethods ChildContainerCount ChildDirector ClipChannelID Color
+syn keyword vizMethods ColorValue CommandName ContainsKey ContainsMouseCursor
+syn keyword vizMethods CopyTo CopyToDirector CreateAlpha CreateExpert CreateFunction
+syn keyword vizMethods CreateGeometry CreateGeometryBGL CreateGlow CreateHDR
+syn keyword vizMethods CreateInfoText CreateKey CreateMaterial CreateRootContainer
+syn keyword vizMethods CreateRootDirector CreateTexture CreateTextureBGL
+syn keyword vizMethods CropBottom CropLeft CropRight CropTop CurrentCamera
+syn keyword vizMethods CurrentCameraIndex CurrentDirectoryPath CurrentFrame
+syn keyword vizMethods CurrentFramePending CurrentRefreshRate Cx CxExt Cy CyExt
+syn keyword vizMethods DOFEventDistribution DayOfMonth DayOfWeek DayOfYear
+syn keyword vizMethods DecoupleExternal Delete DeleteFile DeleteFunction DeleteKey
+syn keyword vizMethods DeleteKeyframe Diffuse Direction Director DirectoryExists
+syn keyword vizMethods DistanceToLine DistanceToPlane DistanceToPlaneSigned
+syn keyword vizMethods DrawKey DrawRGB DrawTexture Duration DurationPending
+syn keyword vizMethods EffectType EffectValue EffectValueDouble Emission
+syn keyword vizMethods EndsWith EnvironmentType Erase EraseChar Event
+syn keyword vizMethods EventChannel EventDirection EventDuration EventValue
+syn keyword vizMethods ExactPicking Expert ExploreDocument FaceOutputNormal
+syn keyword vizMethods Field FileExists Find FindActionChannel FindChannel
+syn keyword vizMethods FindChannelOfObject FindContainer FindDirector
+syn keyword vizMethods FindFirstNotOf FindFirstOf FindKeyframe
+syn keyword vizMethods FindKeyframeOfObject FindLastNotOf FindLastOf
+syn keyword vizMethods FindOrCreateChannelOfObject FindSiblingSubContainer
+syn keyword vizMethods FindSubContainer FindSubDirector FindSuperContainer
+syn keyword vizMethods FirstChildContainer FirstKeyframe FloatValue FocalPlane
+syn keyword vizMethods Fovx FovxExt Fovy FovyExt FrameIn FrameInActive
+syn keyword vizMethods FrameInOut FrameInOutActive FrameInOutPending
+syn keyword vizMethods FrameInPending FrameOut FrameOutActive FrameOutPending
+syn keyword vizMethods FrontScene Frustum FullString Geometry Get Get2
+syn keyword vizMethods GetActionChannel GetAnimationChannel GetAnimationChannels
+syn keyword vizMethods GetBezierHandle GetBoundingBox GetBoundingBoxDimensions
+syn keyword vizMethods GetCamera GetChannels GetChannelsOfObject GetChar
+syn keyword vizMethods GetChildContainerByIndex
+syn keyword vizMethods GetChildContainerContainingMouseCursor GetClipChannel
+syn keyword vizMethods GetClipName GetClipNameActive GetClipNamePending
+syn keyword vizMethods GetContainerAndSubContainers GetDeterminant GetDevice
+syn keyword vizMethods GetDirector GetDirectorOfMergedGeometry
+syn keyword vizMethods GetDirectoryContent GetElapsedTime GetField2
+syn keyword vizMethods GetFirstActiveChildContainer GetFunctionPluginInstance
+syn keyword vizMethods GetGeometryPluginInstance GetGrid
+syn keyword vizMethods GetIndexOfFirstActiveChildContainer GetKeyframe
+syn keyword vizMethods GetKeyframes GetKeys GetLight GetLiveChannel
+syn keyword vizMethods GetLocalIndex GetNumberOfAnimationChannels
+syn keyword vizMethods GetNumberOfClipChannel GetNumberOfLiveChannel
+syn keyword vizMethods GetNumberOfTimecodeSources GetParameterBool
+syn keyword vizMethods GetParameterColor GetParameterContainer
+syn keyword vizMethods GetParameterDouble GetParameterInt GetParameterString
+syn keyword vizMethods GetRGB GetRGB8 GetRGBA GetRGBA8
+syn keyword vizMethods GetRegisterChangedClipFrame GetRegisterChangedClipMode
+syn keyword vizMethods GetRegisterChangedClipModePending GetReportValues
+syn keyword vizMethods GetReportValuesPending GetRotation GetRotationXYZ
+syn keyword vizMethods GetRotationZXY GetScaling GetScaling2
+syn keyword vizMethods GetScenePluginInstance GetScreenBounds
+syn keyword vizMethods GetScreenPointToGeomSurface GetScreenPositionOrtho
+syn keyword vizMethods GetScreenSizeOrtho GetShaderPluginInstance GetString
+syn keyword vizMethods GetSubstring GetTimecode GetTimecodeByIndex GetTouch
+syn keyword vizMethods GetTrace GetTraceByIndex GetTransformedBoundingBox
+syn keyword vizMethods GetTransformedBoundingBoxDimensions GetTranslation
+syn keyword vizMethods GetType GetUVCoordinatesOfScreenPoint GetUnlockedGrid
+syn keyword vizMethods Glow Green Green8 HDR HandlePatterns HandleTaps
+syn keyword vizMethods HasAnimationChannels Height HitContainer HostName Hour
+syn keyword vizMethods IPAddressString Id Image Index InfoText Insert IntValue
+syn keyword vizMethods Invert IsAnimated IsAnimationRunning IsBacklayer
+syn keyword vizMethods IsClipLoaded IsClipLoadedActive IsClipLoadedPending
+syn keyword vizMethods IsFrontlayer IsKeyDown IsMainlayer IsOnTop
+syn keyword vizMethods IsPostRecording IsScreenPointInBoundingBox
+syn keyword vizMethods IsVertexInBoundingBox Join Kerning Key KeyframeCount
+syn keyword vizMethods LBound LButtonState LastChildContainer LastKeyframe
+syn keyword vizMethods LastTouch Left LeftAngle LeftInterpolationMode LeftWeight
+syn keyword vizMethods Length LineAntialiasing LineSpacing Lit LiveChannelID
+syn keyword vizMethods LoadBackScene LoadFromDb LoadFromDbAsync LoadFrontScene
+syn keyword vizMethods LoadMainScene LoadTextFile LocalPosToScreenPos
+syn keyword vizMethods LocalPosToWorldPos Location LocationPath LockMode Locked
+syn keyword vizMethods LoopMode LoopModeActive LoopModePending MButtonState
+syn keyword vizMethods MTAlignGrid MTDOFEventDistribution MTGrid MTHasMomentum
+syn keyword vizMethods MTObjectPlane MTRegister MTRegisterEx MTRegistered
+syn keyword vizMethods MTSetPosition MTTouched MTUseCenter MainScene Map
+syn keyword vizMethods MapPosition MapRotation MapScaling MapType Match Material
+syn keyword vizMethods MaterialValue Matrix Merged MergedChildContainer
+syn keyword vizMethods MergedParentContainer Minute Mirror MirrorAroundLine
+syn keyword vizMethods MirrorAroundVector ModeOnLoadError ModeOnLoadError_FLUSH
+syn keyword vizMethods ModeOnLoadError_NONE ModeOnLoadError_PAUSE
+syn keyword vizMethods ModeOnLoadError_STOP Month MouseOverIPDefineServer
+syn keyword vizMethods MouseOverIPQuitServer MouseOverIPRegister
+syn keyword vizMethods MouseOverIPUndefineAllServers MouseOverIPUndefineServer
+syn keyword vizMethods MouseOverIPUnregister MouseOverIPUnregisterAll MouseX
+syn keyword vizMethods MouseY MoveAllChannelsToDirector MoveTo MoveToContainer
+syn keyword vizMethods MoveToDirector MoveToKeepTransformation Name
+syn keyword vizMethods NextContainer NextDirector NextKeyframe Norm Normalize
+syn keyword vizMethods NumActionChannels NumAnimationChannels NumAxes
+syn keyword vizMethods NumChannels NumChildContainers NumKeyframes NumberOfAxes
+syn keyword vizMethods ObjectStrength Offset Open OpenDocument Orientation Ortho
+syn keyword vizMethods Outline OutputAspect OutputFieldDominance
+syn keyword vizMethods OutputInterlaced OutputRefreshRate OutputRetraceCounter
+syn keyword vizMethods OutputRingbufferSize OutputRingbufferUsed OutputSystem
+syn keyword vizMethods PadLeft PadRight Pan PanExt ParentContainer
+syn keyword vizMethods ParentDirector PathHandle PatternId PendingClipSupported
+syn keyword vizMethods Perspective Play PlayActive PlayBackSpeed
+syn keyword vizMethods PlayBackSpeedActive PlayBackSpeedPending PlayMode
+syn keyword vizMethods PlayModePending PlayMode_ERROR PlayMode_NONE
+syn keyword vizMethods PlayMode_PLAY PlayMode_PLAY_PENDING PlayMode_SCRUB
+syn keyword vizMethods PlayMode_SCRUB_EOF PlayMode_STOP PlayPending PlaySound
+syn keyword vizMethods PlayerStatus_PENDINGREADY PluginInstance PluginName PosX
+syn keyword vizMethods PosY Position PositionExt PositionTrackingActive
+syn keyword vizMethods PositionTrackingContainer PostCurrentTime
+syn keyword vizMethods PostFieldDominance PostLoopActive PostLoopCounter
+syn keyword vizMethods PostRetraceCounter PostSwingActive PreLoopActive
+syn keyword vizMethods PreLoopCounter PreSwingActive Prepend Pressure
+syn keyword vizMethods PreviousContainer PreviousDirector PreviousKeyframe
+syn keyword vizMethods Project ProjectOnLine ProjectOnVector ProjectionMatrix
+syn keyword vizMethods Push PushButton QualityType RButtonState RFind Recognizer
+syn keyword vizMethods Red Red8 RefreshRate RegisterChangedCallback
+syn keyword vizMethods RemoveHandler RemoveTrace RenderEditorHeight
+syn keyword vizMethods RenderEditorWidth RenderMode RenderWindowHeight
+syn keyword vizMethods RenderWindowWidth RepeatMode RepeatModeActive
+syn keyword vizMethods RepeatModePending RepeatMode_FIELD RepeatMode_FRAME
+syn keyword vizMethods RepeatMode_NONE Replace ReplaceChar Reverse ReverseFields
+syn keyword vizMethods ReverseFieldsActive ReverseFieldsPending Rgb Right
+syn keyword vizMethods RightAngle RightInterpolationMode RightWeight
+syn keyword vizMethods RootContainer RootDirector Rotate RotateX RotateY RotateZ
+syn keyword vizMethods Rotation RotationTrackingActive RotationTrackingContainer
+syn keyword vizMethods SaveTextFile SaveToDb SaveToDbAsync Scale Scaling Scene
+syn keyword vizMethods ScreenAbsoluteOffsetToLocalPlaneXYOffset
+syn keyword vizMethods ScreenAbsoluteOffsetToLocalPlaneXZOffset
+syn keyword vizMethods ScreenAbsoluteOffsetToLocalPlaneYZOffset ScreenHeight
+syn keyword vizMethods ScreenOffsetToContainerOffset
+syn keyword vizMethods ScreenOffsetToLocalPlaneXYOffset
+syn keyword vizMethods ScreenOffsetToLocalPlaneXZOffset
+syn keyword vizMethods ScreenOffsetToLocalPlaneYZOffset
+syn keyword vizMethods ScreenOffsetToWorldOffset ScreenPosToLocalGrid
+syn keyword vizMethods ScreenPosToLocalPlaneXY ScreenPosToLocalPlaneXZ
+syn keyword vizMethods ScreenPosToLocalPlaneYZ ScreenPosToLocalPos
+syn keyword vizMethods ScreenPosToWorldGrid ScreenPosToWorldPos ScreenWidth
+syn keyword vizMethods Script ScriptPluginInstance ScriptSettings Scrub
+syn keyword vizMethods ScrubActive ScrubPending Second SendCommand
+syn keyword vizMethods SendRemoteCommand SendVizCommandToHostGroup
+syn keyword vizMethods SeparateSpecular SetCenterPositionLocked
+syn keyword vizMethods SetCenterScreenGridPositionLocked
+syn keyword vizMethods SetCenterScreenPositionLocked SetClipName
+syn keyword vizMethods SetClipNameBack2Back SetClipNameBack2BackEx SetClipNameEx
+syn keyword vizMethods SetClipNamePending SetClipNamePendingEx SetParameterBool
+syn keyword vizMethods SetParameterColor SetParameterContainer
+syn keyword vizMethods SetParameterDouble SetParameterInt SetParameterString
+syn keyword vizMethods SetRGB SetRGB8 SetRGBA SetRGBA8
+syn keyword vizMethods SetRegisterChangedClipFrame SetRegisterChangedClipMode
+syn keyword vizMethods SetRegisterChangedClipModePending
+syn keyword vizMethods SetRegisterChangedPlayerStatus SetScreenPositionOrtho
+syn keyword vizMethods SetScreenSizeOrtho ShadeModel SharpenValue
+syn keyword vizMethods SharpenValueDouble Shininess Show ShowMouseCursor
+syn keyword vizMethods ShowOneChildContainer Size Sort Source Specular Split
+syn keyword vizMethods SquaredNorm Stage StartApplication StartsWith
+syn keyword vizMethods StopAnimation Strength String Substitute System TclSplit
+syn keyword vizMethods TcpSend TcpSendAsync TcpSendAsyncStatus Text Texture
+syn keyword vizMethods TextureUnit Textured Tilt TiltExt Time Timestamp ToString
+syn keyword vizMethods TotalOffset TotalSeconds TouchCount Trace TraceCount
+syn keyword vizMethods Transform Translate TransparancyMode Twist TwistExt
+syn keyword vizMethods TwoSidedLighting Type UBound Unproject
+syn keyword vizMethods UnregisterChangedCallback UpscaleLuma UpscaleLumaActive
+syn keyword vizMethods UpscaleLumaPending UseColor Uuid Valid Value
+syn keyword vizMethods VerticalOrientation VideoHeight VideoWidth
+syn keyword vizMethods VideooutInputRetraceCounter VideooutOutputRetraceCounter
+syn keyword vizMethods VideooutPropagationDelay VideooutRetraceCounter View
+syn keyword vizMethods ViewMatrix VizCommunication VizId Width Wireframe
+syn keyword vizMethods WireframeWidth WordSpacing WorldPosToLocalPos
+syn keyword vizMethods WorldPosToScreenPos WrapType X XyzValue Y Year Z ZBuffer
+syn keyword vizMethods x xy xyz y z
 
 " Viz 3 Script: keywords
 syn keyword vizKeyword As ByRef ByVal Case Dim Do Each Else ElseIf End
 syn keyword vizKeyword Exit For Function If In Is Loop Next Null Select
-syn keyword vizKeyword Step Structure Sub Then To Until While
+syn keyword vizKeyword Step Structure Sub Then This To Until While
 
 syn keyword vizTodo contained	TODO
 
