@@ -78,8 +78,7 @@ syn keyword vizFunction UpdateGuiParameterEntries UpdateGuiParameterIntDefMinMax
 syn keyword vizFunction IsKeyDown IsLButtonDown IsMButtonDown IsRButtonDown
 syn keyword vizFunction SendCommand SendRemoteCommand TcpSend
 
-" Viz 3 Script: member methods
-" Alpha
+" Viz 3 Script: Member Methods
 syn keyword vizMethods ActionChannelCount ActionString Active ActiveExt Actor
 syn keyword vizMethods AddContainer AddDirector AddHandler AddHostToGroup
 syn keyword vizMethods AddKeyframe AddLogMessage AddScreenOffset AddTrace Alpha
@@ -274,7 +273,7 @@ syn keyword vizMethods VizCommunication VizId Width Wireframe WireframeWidth
 syn keyword vizMethods WordSpacing WorldPosToLocalPos WorldPosToScreenPos
 syn keyword vizMethods WrapType x X xy xyz XyzValue y Y Year z Z ZBuffer
 
-" Viz 3 Script: keywords
+" Viz 3 Script: Keywords
 syn keyword vizKeyword As ByRef ByVal Case Dim Do Each Else ElseIf End
 syn keyword vizKeyword Exit For Function If In Is Loop Next Null Select
 syn keyword vizKeyword Step Structure Sub Then This To Until While
