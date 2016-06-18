@@ -1,6 +1,3 @@
-if has('autocmd')
-    augroup ftdetect_viz
-        autocmd!
-        autocmd BufNewFile,BufRead *.viz setfiletype viz
-    augroup END
-end
+" Note: that there is no "augroup" command, this has already been done when
+" sourcing your file.
+autocmd BufNewFile,BufRead *.viz setfiletype viz
